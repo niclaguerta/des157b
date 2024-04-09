@@ -47,13 +47,13 @@ header {
 #quote {
     text-shadow: #fbfdf2 1px 0 10px;
     color: #000;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 #quote.switch {
     text-shadow: #FC0 1px 0 10px;
     color: #fff;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 #chonk {
@@ -83,7 +83,7 @@ header {
     display: flex;
     gap: 50px;
     font-family: 'Lilita One', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.4em;
     border: 10px ridge #ad4f05;
 }
 
@@ -126,7 +126,7 @@ nav ol, nav ul {
     margin-left: 0;
     padding-left: 0;
     font-family: 'Itim', cursive;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 section li {
