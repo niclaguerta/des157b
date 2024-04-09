@@ -21,16 +21,14 @@ img {
 }
   
 body {
-    background: url(images/day.png) no-repeat center center fixed; 
+    background: url(images/day.png) repeat-x;
     background-size: cover;
     animation: scrollRight 50s linear infinite;
     transition: all 2s;
 }
 
 body.switch {
-    background: url(images/night.png) no-repeat center center fixed;
-    background-size: cover;
-    transition: all 2s;
+    background: url(images/night.png);
 }
 
 #container {
