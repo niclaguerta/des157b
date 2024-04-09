@@ -53,15 +53,24 @@ header {
 }
 
 #quote.switch {
-    text-shadow: #FC0 1px 0 10px;
+    text-shadow: #000 1px 0 10px;
     color: #fff;
     font-size: 1.1em;
 }
 
-#chonk {
+#chonk img {
     margin: auto;
     animation: wiggle 2s linear infinite;
     transition: all 2s;
+}
+
+body.switch #chonk img {
+    animation: scale 2s linear infinite;
+}
+
+@keyframes scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 @keyframes wiggle {
@@ -99,11 +108,33 @@ header {
     transition: all 2s;
 }
 
+#chicken {
+    animation: chickenRun 15s infinite;
+    display: inline-block; /* Necessary for transform to work */
+}
+
+@keyframes chickenRun {
+    0%, 100% {
+        transform: translateX(0) scaleX(1); /* Start/End: At beginning, facing right */
+    }
+    25% {
+        transform: translateX(1200px) scaleX(1); /* Reach end, still facing right */
+    }
+    50% {
+        transform: translateX(1200px) scaleX(-1); /* Flip at end, facing left */
+    }
+    75% {
+        transform: translateX(0) scaleX(-1); /* Return to start, still facing left */
+    }
+}
+
+
 main {
     display: flex;
     justify-content: space-evenly;
     margin: 1em auto;
     background: linear-gradient(0deg, rgba(237,169,98,1) 0%, rgba(255,201,116,1) 25%, rgba(255,201,116,1) 50%, rgba(255,201,116,1) 75%, rgba(237,169,98,1) 100%);
+    border: 10px ridge #ad4f05;
 }
 
 main section {
@@ -164,25 +195,24 @@ button {
     padding: 12px;
     background-color: orange;
     color: #333;
-    border: 5px solid transparent;
-    border-radius: 10px;
+    border: 7px ridge #ad4f05;
     font-family: 'Itim', cursive;
-    border-color: #ad4f05;
 }
 
 button:hover {
-    background-color: #fff;
+    background-color: #c2e6f6;
     cursor: pointer;
 }
 
 button.switch {
-    background-color: rgb(235, 235, 235);
-    border-color: #333;
+    background-color: orange;
+    border: 7px ridge #ad4f05;
 }
 
 button.switch:hover {
     background-color: #ffb9ff;
     color: #000;
+    
 }
 
 #footer {

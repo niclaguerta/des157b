@@ -18,8 +18,6 @@
             quote.className = 'switch';
             footer.className = 'switch';
             chonkImage.src = 'images/sleep.png'; // Change to the sleep image
-            chonkImage.width = 80; 
-            chonkImage.height = 80;
             for (const section of sections) {
                 section.className = 'switch';
             }
@@ -31,12 +29,30 @@
             quote.removeAttribute('class');
             footer.removeAttribute('class');
             chonkImage.src = 'images/awake.png'; // Change back to the awake image
-            chonkImage.width = 80; 
-            chonkImage.height = 80; 
             for (const section of sections) {
                 section.removeAttribute('class');
             }
             mode = 'dark';
         }
     });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const audioClip = new Audio('audio/click.mp3');
+    
+        function playSound() {
+            if (audioClip.paused) {
+                audioClip.play();
+            } else {
+                audioClip.currentTime = 0;
+            }
+        }
+    
+        const links = document.querySelectorAll('section a');
+        links.forEach(link => {
+            link.addEventListener('mouseenter', playSound);
+        });
+    });
+    
+    
 })();
+
