@@ -9,13 +9,15 @@
     const quote = document.querySelector('#quote');
     const chonkImage = document.querySelector('#chonk img'); 
     const footer = document.querySelector('#footer');
-    let mode = 'dark';
+    let mode = 'day'; // Initial mode is set to 'day'
 
-    const music = new Audio('audio/overture.mp3');
+    const musicDay = new Audio('audio/overture.mp3');
+    const musicNight = new Audio('audio/grandpa.mp3');
     let musicPlaying = false;
 
     button.addEventListener('click', function() {
-        if (mode === 'dark') {
+        if (mode === 'day') {
+            // Switching to night mode
             body.className = 'switch';
             banner.className = 'switch';
             button.className = 'switch';
@@ -25,8 +27,13 @@
             for (const section of sections) {
                 section.className = 'switch';
             }
-            mode = 'light';
+            mode = 'night';
+            if (musicPlaying) {
+                musicDay.pause(); // Now pauses day music when switching to night mode
+                musicNight.play(); // Now plays night music in night mode
+            }
         } else {
+            // Switching to day mode
             body.removeAttribute('class');
             banner.removeAttribute('class');
             button.removeAttribute('class');
@@ -36,17 +43,31 @@
             for (const section of sections) {
                 section.removeAttribute('class');
             }
-            mode = 'dark';
+            mode = 'day';
+            if (musicPlaying) {
+                musicNight.pause(); // Now pauses night music when switching to day mode
+                musicDay.play(); // Now plays day music in day mode
+            }
         }
     });
 
     toggleMusicButton.addEventListener('click', function() {
         if (musicPlaying) {
-            music.pause();
+            // If music is currently playing, pause the appropriate track based on the inverted logic
+            if (mode === 'night') {
+                musicNight.pause();
+            } else {
+                musicDay.pause();
+            }
             musicPlaying = false;
             toggleMusicButton.textContent = "Play Music";
         } else {
-            music.play();
+            // Play the appropriate track based on the current mode with inverted logic
+            if (mode === 'night') {
+                musicNight.play();
+            } else {
+                musicDay.play();
+            }
             musicPlaying = true;
             toggleMusicButton.textContent = "Pause Music"; 
         }
@@ -69,10 +90,9 @@
         });
 
         const buttons = document.querySelectorAll('button');
-        buttons.forEach(link => {
-            link.addEventListener('mouseenter', playSound);
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', playSound);
         });
     });
     
 })();
-
