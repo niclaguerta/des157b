@@ -30,6 +30,7 @@ body {
 body.switch {
     background: url(images/night.png) no-repeat center center fixed;
     background-size: cover;
+    transition: all 2s;
 }
 
 #container {
