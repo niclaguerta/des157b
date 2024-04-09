@@ -1,7 +1,8 @@
 (function() {
     'use strict';
 
-    const button = document.querySelector('button');
+    const button = document.querySelector('#toggleSwitch');
+    const toggleMusicButton = document.getElementById('toggleMusic');
     const body = document.querySelector('body');
     const banner = document.querySelector('#banner');
     const sections = document.querySelectorAll('section');
@@ -9,6 +10,9 @@
     const chonkImage = document.querySelector('#chonk img'); 
     const footer = document.querySelector('#footer');
     let mode = 'dark';
+
+    const music = new Audio('audio/overture.mp3');
+    let musicPlaying = false;
 
     button.addEventListener('click', function() {
         if (mode === 'dark') {
@@ -36,6 +40,18 @@
         }
     });
 
+    toggleMusicButton.addEventListener('click', function() {
+        if (musicPlaying) {
+            music.pause();
+            musicPlaying = false;
+            toggleMusicButton.textContent = "Play Music";
+        } else {
+            music.play();
+            musicPlaying = true;
+            toggleMusicButton.textContent = "Pause Music"; 
+        }
+    });
+
     document.addEventListener('DOMContentLoaded', function() {
         const audioClip = new Audio('audio/click.mp3');
     
@@ -51,8 +67,12 @@
         links.forEach(link => {
             link.addEventListener('mouseenter', playSound);
         });
+
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(link => {
+            link.addEventListener('mouseenter', playSound);
+        });
     });
-    
     
 })();
 

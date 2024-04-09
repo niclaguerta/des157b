@@ -118,10 +118,10 @@ body.switch #chonk img {
         transform: translateX(0) scaleX(1); /* Start/End: At beginning, facing right */
     }
     25% {
-        transform: translateX(1200px) scaleX(1); /* Reach end, still facing right */
+        transform: translateX(1250px) scaleX(1); /* Reach end, still facing right */
     }
     50% {
-        transform: translateX(1200px) scaleX(-1); /* Flip at end, facing left */
+        transform: translateX(1250px) scaleX(-1); /* Flip at end, facing left */
     }
     75% {
         transform: translateX(0) scaleX(-1); /* Return to start, still facing left */
@@ -188,7 +188,7 @@ section.switch a:hover {
     color: rgb(235, 235, 235);
 }
 
-button {
+#toggleSwitch {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -199,17 +199,44 @@ button {
     font-family: 'Itim', cursive;
 }
 
-button:hover {
+#toggleSwitch:hover {
     background-color: #c2e6f6;
     cursor: pointer;
 }
 
-button.switch {
+#toggleSwitch.switch {
     background-color: orange;
     border: 7px ridge #ad4f05;
 }
 
-button.switch:hover {
+#toggleSwitch.switch:hover {
+    background-color: #ffb9ff;
+    color: #000;
+    
+}
+
+#toggleMusic {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    padding: 12px;
+    background-color: orange;
+    color: #333;
+    border: 7px ridge #ad4f05;
+    font-family: 'Itim', cursive;
+}
+
+#toggleMusic:hover {
+    background-color: #c2e6f6;
+    cursor: pointer;
+}
+
+#toggleMusic.switch {
+    background-color: orange;
+    border: 7px ridge #ad4f05;
+}
+
+#toggleMusic.switch:hover {
     background-color: #ffb9ff;
     color: #000;
     
