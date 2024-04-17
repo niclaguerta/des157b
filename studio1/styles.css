@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #000;
+}
+
+#myVideo {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+section {
+    position: absolute;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    text-shadow: 1px 3px 3px rgba(65,65,65,0.51);
+}
+
+#line1 {
+    bottom: 0%;
+    left: 0%;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: all 2s;
+}
+
+#line2 {
+    bottom: 10%;
+    left: 10%;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: all 2s;
+}
+
+#line3 {
+    bottom: 20%;
+    left: 20%;
+    margin-left: 20px;
+    margin-top: 20px;
+    transition: all 2s;
+}
+
+.fa-expand {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    color: #000;
+}
+
+.fa-expand:hover {
+    cursor: pointer;
+}
+
+.fa-filter {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    font-size: 36px;
+    color: #000;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}
