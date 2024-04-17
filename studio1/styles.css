@@ -76,3 +76,13 @@ section {
 .showing {
     opacity: 1;
 }
+
+@media (min-width: 430px) {
+    section {
+        font-size: 1.5em;
+    }
+
+    .fa-expand, .fa-filter {
+        font-size: 36px;
+    }
+}
