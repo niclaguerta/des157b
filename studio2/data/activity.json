@@ -1,0 +1,92 @@
+{
+    "point1" : {
+        "time" : "7am",
+        "mood" : 1,
+        "activity" : "eat breakfast"
+    },
+    "point2" : {
+        "time" : "8am",
+        "mood" : 2,
+        "activity" : "sleep in bedroom"
+    },
+    "point3" : {
+        "time" : "9am",
+        "mood" : 2,
+        "activity" : "morning meds + treat"
+    },
+    "point4" : {
+        "time" : "10am",
+        "mood" : 2,
+        "activity" : "look out the backdoor"
+    },
+    "point5" : {
+        "time" : "11am",
+        "mood" : 2,
+        "activity" : "sleep by the backdoor"
+    },
+    "point6" : {
+        "time" : "12pm",
+        "mood" : 2,
+        "activity" : "sleep by the backdoor"
+    },
+    "point7" : {
+        "time" : "1pm",
+        "mood" : 2,
+        "activity" : "follow mom around"
+    },
+    "point8" : {
+        "time" : "2pm",
+        "mood" : 2,
+        "activity" : "look out the front window"
+    },
+    "point9" : {
+        "time" : "3pm",
+        "mood" : 2,
+        "activity" : "sleep on the couch"
+    },
+    "point10" : {
+        "time" : "4pm",
+        "mood" : 2,
+        "activity" : "sleep on the couch"
+    },
+    "point11" : {
+        "time" : "5pm",
+        "mood" : 3,
+        "activity" : "annoy dad for food"
+    },
+    "point12" : {
+        "time" : "6pm",
+        "mood" : 3,
+        "activity" : "annoy dad for food"
+    },
+    "point13" : {
+        "time" : "7pm",
+        "mood" : 1,
+        "activity" : "eat dinner"
+    },
+    "point14" : {
+        "time" : "8pm",
+        "mood" : 2,
+        "activity" : "bath time"
+    },
+    "point15" : {
+        "time" : "9pm",
+        "mood" : 2,
+        "activity" : "evening meds + treat"
+    },
+    "point16" : {
+        "time" : "10pm",
+        "mood" : 2,
+        "activity" : "sleep in the office"
+    },
+    "point17" : {
+        "time" : "11pm",
+        "mood" : 2,
+        "activity" : "sleep in the office"
+    },
+    "point18" : {
+        "time" : "12am",
+        "mood" : 2,
+        "activity" : "sleep in the bedroom"
+    }
+}
