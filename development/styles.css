@@ -1,0 +1,75 @@
+body {
+	background-image: url(images/ar-social.jpeg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	padding-top: 671px;
+    background-size: contain;
+    padding-top: 41.9%;
+}
+
+section {
+	background: #071424;
+	padding: 30px;
+}
+
+article {
+	margin: auto;
+	width: 75%;
+	font-family: Arial;
+	font-size: 24px;
+	color: #fff;
+	line-height: 1.5em;
+	
+	/* Needed to position the header
+	relative to this parent element */
+	position: relative;
+}
+
+header {
+	/* Changes the postioning of this element */
+	position: absolute;
+	
+	/* Moves the element up on top of the image */
+	top: -300px;
+	left: 0;
+	
+	/* Need to set the width, otherwise the element
+	shrink wraps around the content */
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+	padding: 20px;
+	
+	/* Needed to include the padding as part of
+	the width of the element */
+	box-sizing: border-box;
+}
+
+header h1, header h2 {
+	color: #fff;
+	margin: 0;
+	padding: 0;
+    font-family: fantasy;
+}
+
+header h1 {
+	margin-bottom: 0.5em;
+    text-align: center;
+}
+
+header h2 {
+    text-align: center;
+}
+
+div p {
+	color: #ccc;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer {
+	background: #000;
+	padding: 20px 0;
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	color:#ccc;
+}
