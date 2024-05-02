@@ -1,0 +1,396 @@
+/* Resets */
+* { box-sizing: border-box; }
+
+h1, h2, h3, p, nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul { list-style-type: none; }
+
+a { text-decoration: none; }
+
+img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
+    border: 5px double goldenrod;
+}
+
+header, section, main, footer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Rules */
+
+div.header {
+    background-color: #071015;
+}
+
+header {
+    background-image: url(images/header.jpeg);
+    background-size: cover;
+    aspect-ratio: 5 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+header h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: .5em;
+    margin: auto;
+}
+
+/* Navigation Rules */
+
+nav > ul {
+    display: flex;
+    justify-content: center;
+    background: rgb(100,103,50);
+    background: linear-gradient(0deg, rgba(100,103,50,1) 0%, rgba(236,198,71,1) 100%);
+    padding: 10px 0;
+}
+
+nav > ul > li {
+    flex: 1;
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    color: #000;
+    font-weight: 600;
+    padding: 0 10px;
+    font-size: 1.2em;
+    border-right: 1px solid #000;
+}
+
+nav ul li:last-of-type a {
+    border: none;
+}
+
+nav ul li ul {
+    position: absolute;
+    left:-9999px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul li:hover ul {
+    left: auto;
+}
+
+nav ul li ul li a {
+	background:#eff4e1;
+	border-bottom:1px solid #666;
+	border-right:1px solid #666;
+}
+
+nav ul li ul li a:hover {
+	background: #e2df7c;
+}
+
+nav > ul > li > a:hover {
+    color: wheat;
+}
+
+/* Body Rules */
+
+body {
+    font-family: 'Crimson Text', serif;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+}
+
+h2 { 
+    font-weight: 600;
+    margin-bottom: .5em;
+    font-size: 2em;
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: 1.4em;
+}
+
+.wrap {
+    padding:0 20px;
+}
+
+/* Main Rules */
+
+div.main {
+    background: url(images/background4.jpeg);
+}
+
+.main section {
+    background-color: #000;
+    padding: 20px;
+}
+
+main > section > p {
+    text-align: left;
+    font-size: 1.25em;
+}
+
+.photo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.photo img {
+    flex: 1;
+}
+
+.button {
+    margin-top: 1em;
+}
+
+.button p {
+    font-size: 1.4em;
+    padding: 10px;
+    margin-top: 1em;
+    background: rgb(253,220,57);
+    background: radial-gradient(circle, rgba(253,220,57,1) 0%, rgba(242,176,36,1) 100%);
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.button a {
+    color: #000;
+    padding: 10px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 600;
+}
+
+.cats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Footer Rules */
+
+div.footer {
+    background-color:#071015;
+    padding: 0 20px;
+}
+
+.footer footer {
+    padding: 40px 0;
+    background-color: #071015;
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+}
+
+.footer a {
+    color: #fff;
+}
+
+address {
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+/* Animation Rules */
+
+#chonk {
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border: 5px double goldenrod;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20%;
+	background: url(images/about-ke$ha.jpg);
+	background-size: cover;
+}
+
+#cj {
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border: 5px double goldenrod;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20%;
+	background: url(images/about-cj.jpg);
+	background-size: cover;
+}
+
+#rats {
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border: 5px double goldenrod;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20%;
+	background: url(images/about-rats.jpg);
+	background-size: cover;
+}
+
+#meatball {
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border: 5px double goldenrod;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20%;
+	background: url(images/about-meatball.jpg);
+	background-size: cover;
+}
+
+#casey {
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border: 5px double goldenrod;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20%;
+	background: url(images/about-casey.jpg);
+	background-size: cover;
+}
+
+#kittyboy {
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	border: 5px double goldenrod;
+	position: relative;
+	overflow: hidden;
+	border-radius: 20%;
+	background: url(images/about-kittyboy.jpg);
+	background-size: cover;
+}
+
+article h3 {
+    font-size: 2em;
+}
+
+article div {
+	position: absolute;
+	top: 235px;
+	left: 0;
+	
+	text-align: center;
+	width: 300px;
+	height: 200px;
+	padding: 15px 30px;
+	
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	transition: all 1000ms cubic-bezier(0.190, 1.000, 0.220, 1.000); 
+}
+
+article:hover div {
+	top: 100px;
+}
+
+/* Media Rules */
+
+@media only screen and (min-width: 600px) {
+    img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 24px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media only screen and (min-width: 1020px) {
+    
+    img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 6.5em;
+    }
+
+    nav ul li a {
+        font-size: 1.4em;
+    }
+
+    h2 { 
+        font-size: 3em;
+    }
+
+    .main section {
+        padding: 40px 140px;
+    }
+    
+    main > section > p {
+        text-align: left;
+        font-size: 1.4em;
+    }
+
+    main > section > p:last-of-type {
+        margin-bottom: 30px;
+    }
+
+    p {
+        line-height: 1.8em;
+    }
+
+    .button {
+        display: flex;
+        gap: 40px;
+        transition: all 100ms;
+        height: 85px;
+    }
+
+    .button p:hover {
+        font-size: 1.6em;
+    }
+
+    .button p {
+        flex: 1;
+    }
+
+    .footer footer {
+    font-size: 1.25em;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: 50px;
+    }
+
+}
