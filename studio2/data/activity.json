@@ -31,8 +31,8 @@
     },
     "point7" : {
         "time" : "1pm",
-        "mood" : 2,
-        "activity" : "follow mom around"
+        "mood" : 1,
+        "activity" : "zoomies"
     },
     "point8" : {
         "time" : "2pm",
@@ -52,12 +52,12 @@
     "point11" : {
         "time" : "5pm",
         "mood" : 3,
-        "activity" : "annoy dad for food"
+        "activity" : "cry for food"
     },
     "point12" : {
         "time" : "6pm",
         "mood" : 3,
-        "activity" : "annoy dad for food"
+        "activity" : "cry for food"
     },
     "point13" : {
         "time" : "7pm",
