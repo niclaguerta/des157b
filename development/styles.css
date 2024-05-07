@@ -1,5 +1,5 @@
 body {
-	background-image: url(images/ar-social.jpeg);
+	background-image: url(images/background.png);
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
@@ -9,7 +9,7 @@ body {
 }
 
 section {
-	background: #071424;
+	background: #fff;
 	padding: 30px;
 }
 
@@ -18,8 +18,9 @@ article {
 	width: 75%;
 	font-family: Arial;
 	font-size: 24px;
-	color: #fff;
+	color: #000;
 	line-height: 1.5em;
+	background-color: #fff;
 	
 	/* Needed to position the header
 	relative to this parent element */
@@ -37,8 +38,6 @@ header {
 	/* Need to set the width, otherwise the element
 	shrink wraps around the content */
 	width: 100%;
-	background: rgba(0,0,0,0.7);
-	padding: 20px;
 	
 	/* Needed to include the padding as part of
 	the width of the element */
@@ -46,30 +45,40 @@ header {
 }
 
 header h1, header h2 {
-	color: #fff;
+	color: #000;
 	margin: 0;
 	padding: 0;
-    font-family: fantasy;
+	font-family: "Anton", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
+	  
+
 
 header h1 {
-	margin-bottom: 0.5em;
-    text-align: center;
+    text-align: left;
+	margin: 1em 0;
 }
 
 header h2 {
-    text-align: center;
+	text-align: left;
+	margin: 1em 0;
 }
 
 div p {
-	color: #ccc;
+	color: #000;
     font-family: 'Times New Roman', Times, serif;
 }
 
+.content {
+	margin: auto;
+}
+
 footer {
-	background: #000;
+	background: rgb(255,115,176);
+	background: radial-gradient(circle, rgba(255,115,176,1) 0%, rgba(255,180,136,1) 50%, rgba(100,171,255,1) 100%);
 	padding: 20px 0;
 	text-align: center;
 	font-family: 'Times New Roman', Times, serif;
-	color:#ccc;
+	color:#000;
 }
