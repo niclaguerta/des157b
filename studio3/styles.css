@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: auto;
+    border: 5px solid peru;
+    margin-bottom: 25px;
+}
+
+body {
+    background: url(images/background.jpeg);
+}
+
+header {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Yesteryear";
+    padding: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .pics {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        overflow-x: hidden;
+    }
+
+    .pic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+  }
