@@ -131,33 +131,80 @@
 
     <div class="cards">
         <div class="card" id="card1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">In California, 93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
-        <div class="card" id="card2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
-        <div class="card" id="card3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
-        <div class="card" id="card4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
+        <div class="card" id="card2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="card" id="card3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="card" id="card4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="card" id="card5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="card" id="card6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
-        AOS.init();
 
-        new TypeIt("h1", {
-            speed: 100,
-            loop: false,
-        }).go();
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
 
-        const container = document.getElementById('characterGrid');
-        for (let i = 0; i < 100; i++) {
-            const characterDiv = document.createElement('div');
-            characterDiv.classList.add('character');
-            const img = document.createElement('img');
-            img.src = 'images/sprite.png';
-            img.alt = 'character';
-            img.classList.add('characterart');
-            characterDiv.appendChild(img);
-            container.appendChild(characterDiv);
-        }
-        
+            new TypeIt("h1", {
+                speed: 100,
+                loop: false,
+            }).go();
+
+            const container = document.getElementById('characterGrid');
+            let characters = [];
+            for (let i = 0; i < 100; i++) {
+                const characterDiv = document.createElement('div');
+                characterDiv.classList.add('character');
+                const img = document.createElement('img');
+                img.src = 'images/sprite.png'; // Make sure this path is correct
+                img.alt = 'character';
+                img.classList.add('characterart', 'face-down'); // Start with face-down as default
+                characterDiv.appendChild(img);
+                container.appendChild(characterDiv);
+                characters.push(characterDiv);
+            }
+
+            let card3 = document.getElementById('card3');
+            let card5 = document.getElementById('card5');
+            let hiddenCard3 = false;
+            let hiddenCard5 = false;
+
+            function handleCharacterVisibility(card, hiddenFlag, setFlag) {
+                let cardPos = card.getBoundingClientRect().top + window.scrollY;
+                
+                if (window.scrollY + window.innerHeight > cardPos) {
+                    if (!hiddenFlag) {
+                        setFlag(true);
+                        // Select and hide 20% of the characters
+                        for (let i = 0; i < Math.floor(characters.length * 0.2); i++) {
+                            let index = Math.floor(Math.random() * characters.length);
+                            let character = characters[index];
+                            character.style.transition = 'opacity 2s ease-out';
+                            character.style.opacity = '0';
+                            setTimeout(() => {
+                                character.style.display = 'none';
+                            }, 2000); // Ensure it disappears after fade out
+                        }
+                    }
+                } else {
+                    if (hiddenFlag) {
+                        setFlag(false);
+                        // Show all characters
+                        characters.forEach(char => {
+                            char.style.display = 'block';
+                            char.style.transition = 'opacity 2s ease-in';
+                            char.style.opacity = '1';
+                        });
+                    }
+                }
+            }
+
+            window.addEventListener('scroll', function() {
+                handleCharacterVisibility(card3, hiddenCard3, val => hiddenCard3 = val);
+                handleCharacterVisibility(card5, hiddenCard5, val => hiddenCard5 = val);
+            });
+        });
+
     </script>
 </body>
 
