@@ -28,7 +28,7 @@ body {
 
 body.switch {
     background: url(images/night.png);
-        animation: scrollRight 50s linear infinite;
+    animation: scrollRight 50s linear infinite;
     transition: all 2s;
 }
 
