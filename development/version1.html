@@ -11,7 +11,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -24,23 +24,36 @@
         body {
             max-width: 1200px;
             margin: auto;
-            background-color: #F1E9EF;
+            background-color: #27262C;
         }
 
         header {
+            color: #fff;
             text-align: center;
+            font-family: "Jersey 25", sans-serif;
+            font-size: 3em;
+            padding-top: 250px;
+            padding-bottom: 300px;
+        }
+
+        #userinstruction {
+            font-size: 0.7em;
         }
 
         :root {
-            --pixel-size: 3;
+            --pixel-size: 4;
         }
 
         .grid-container {
             display: grid;
             grid-template-columns: repeat(20, calc(28px * var(--pixel-size)));
             grid-gap: 5px;
-            padding-bottom: 50px;
+            margin: auto;
+            padding-top: 100px;
+            padding-bottom: 100px;
             justify-content: center;
+            position: sticky;
+            top: 60px;
         }
 
         .character {
@@ -54,6 +67,10 @@
             width: calc(112px * var(--pixel-size));
         }
 
+        .pixelart {
+            image-rendering: pixelated;
+        }
+
         @keyframes moveSpritesheet {
             from {
                 transform: translate3d(0px, 0, 0);
@@ -63,19 +80,19 @@
             }
         }
 
-        .cards {
-
-        }
-
         .card {
             background-color: black;
             color: #fff;
             width: 75%;
             font-size: 1.5em;
             line-height: 1.5em;
-            margin: auto auto 100px auto;
+            margin: auto auto 600px auto;
             padding: 30px 30px 30px 40px;
             border: 10px ridge #FF8427;
+        }
+
+        .card:last-child {
+            margin-bottom: 50px; /* No bottom margin for the last card */
         }
     </style>
 </head>
@@ -84,27 +101,35 @@
 
     <header>
         <h1>we are the 4%</h1>
+        <p>by nicole laguerta</p>
+        <p id="userinstruction">(scroll to continue)</p>
     </header>
     
     <div class="grid-container" id="characterGrid"></div>
 
     <div class="cards">
-        <div class="card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
-        <div class="card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
+        <div class="card" id="card1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
+        <div class="card" id="card2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
+        <div class="card" id="card3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
+        <div class="card" id="card4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree by age 26, compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
         AOS.init();
+
+        new TypeIt("h1", {
+            speed: 100,
+            loop: false,
+        }).go();
 
         const container = document.getElementById('characterGrid');
         for (let i = 0; i < 100; i++) {
             const characterDiv = document.createElement('div');
             characterDiv.classList.add('character');
             const img = document.createElement('img');
-            img.src = 'images/sprite1.png';
+            img.src = 'images/sprite.png';
             img.alt = 'character';
             img.classList.add('characterart');
             characterDiv.appendChild(img);
