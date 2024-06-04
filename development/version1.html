@@ -32,14 +32,8 @@
             text-align: center;
             font-family: "Jersey 25", sans-serif;
             font-size: 3em;
-            padding-top: 150px;
+            padding-top: 250px;
             padding-bottom: 300px;
-        }
-
-        #instruction {
-            margin-top: 150px;
-            font-size: 0.6em;
-            color: #FF8427;
         }
 
         #userinstruction {
@@ -47,16 +41,16 @@
         }
 
         :root {
-            --pixel-size: 3;
+            --pixel-size: 4;
         }
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(15, calc(28px * var(--pixel-size)));
+            grid-template-columns: repeat(20, calc(28px * var(--pixel-size)));
             grid-gap: 5px;
             row-gap: 10px;
             margin: auto;
-            padding-top: 30px;
+            padding-top: 100px;
             padding-bottom: 100px;
             justify-content: center;
             position: sticky;
@@ -130,7 +124,7 @@
     <header>
         <h1>we are the 4%</h1>
         <p>by nicole laguerta</p>
-        <p id="instruction" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">(scroll to continue)</p>
+        <p id="userinstruction">(scroll to continue)</p>
     </header>
     
     <div class="grid-container" id="characterGrid"></div>
