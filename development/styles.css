@@ -142,7 +142,7 @@ header {
     color: #fff;
     padding: 20px;
     border: 10px ridge #FF8427;
-    z-index: 1000; /* Ensure it is above other elements */
+    z-index: 0; /* Ensure it is above other elements */
 }
 
 .hidden {
