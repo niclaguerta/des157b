@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Capstone Project</title>
+
+    <!-- Normalize CSS for browser compatibility -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>we are the 4%</h1>
+        <p>by nicole laguerta</p>
+        <p id="instruction" data-aos="fade-up" data-aos-delay="1800" data-aos-duration="2000">(scroll to continue)</p>
+    </header>
+
+    <div class="grid-container" id="characterGrid"></div>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="card" id="card1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">In California, 93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree compared to 50% of their non-foster peers.</div>
+        <div class="card" id="card2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"> Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic under-preparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
+        <div class="card" id="card3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">In the context of these overwhelming obstacles, it's crucial to recognize the individual stories and dreams behind the statistics.</div>
+        <div class="card" id="card4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">By now, you've probably noticed these sprites in the back.</div>
+        <div class="card" id="card5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Each of the 100 sprites you see represents a foster youth with dreams, challenges, and unique identities.</div>
+        <div class="card" id="card6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Go ahead and click on a sprite to learn more about them.</div>
+        <div class="card" id="card7" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">As you scroll, these sprites will gradually disappear, illustrating the steep drop-off in educational attainment among foster youth.</div>
+        <div class="card" id="card8" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">This stark visual representation underscores the critical need for effective foster care interventions, especially in the realm of <span style="color: rgb(4, 162, 4);">education</span>.</div>
+        <div class="card" id="card9" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">One of the objectives of foster care is to provide a stable environment that allows children to maintain a normal life during a turbulent period. <strong style="color: rgb(255, 61, 61);">This includes continuing their education and development of educational opportunities.</strong></div>
+        <div class="card" id="card10" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Students in foster care often face complex challenges arising from the instability of their living arrangements. Removal from the family home or changes in foster care placement can cause students to move schools or even districts.</div>
+        <div class="card" id="card11" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><strong>School Mobility:</strong> 34% of students in foster care moved schools during the 2018–19 school year compared to only 5% of non-foster students. Over four years, 71% of foster students moved schools at least once, with almost one quarter moving four or more times.</div>
+        <div class="card" id="card12" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">This instability can interrupt students' learning progression, causing them to miss topics or material already covered at their new school and adjust to new curricula, teachers, and social environments.</div>
+        <div class="card" id="card13" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">In addition, students in foster care often attend under-resourced schools, which compounds their educational challenges. High-poverty schools struggle with issues such as larger class sizes, fewer educational materials, and less access to experienced teachers</div>
+        <div class="card" id="card14" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><strong>High-Poverty Schools:</strong> Nearly half of all students in foster care are enrolled in the highest-poverty schools, which tend to have greater resourcing challenges.</div>
+        <div class="card" id="card15" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">This environment often magnifies the challenges faced by foster children, significantly lowering their motivation and hindering their ability to succeed.</div>
+        <div class="card" id="card16" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Given these compounded disadvantages, it is not surprising that the overwhelming stress and lack of adequate support lead directly to higher rates of absenteeism and disciplinary actions among foster youth.</div>
+        <div class="card" id="card17" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><strong>Absenteeism and Suspension:</strong> Foster youth are twice as likely to be chronically absent and more than four times as likely to be suspended as their non-foster peers.</div>
+        <div class="card" id="card18" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">The frequent absenteeism and high suspension rates not only disrupt the daily learning experiences of foster youth but also severely impact their long-term academic performance. This disruption is reflected starkly in their standardized test scores.</div>
+        <div class="card" id="card19" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"><strong>Academic Achievement:</strong> On state tests, only 24% of foster youth meet proficiency standards in English language arts, and 15% in mathematics, compared to 51% and 40% of non-foster students, respectively.</div>
+        <div class="card" id="card20" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">The consequences of these educational disparities extend beyond standardized test scores.</div>
+        <div class="card" id="card21" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Foster youth are significantly less likely to graduate from high school, and those who do often find themselves unprepared for the rigors of higher education.</div>
+        <div class="card" id="card22" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Thus, despite the majority aspiring to higher education, only 4% manage to graduate from college.</div>
+        <div class="card" id="card23" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Investing in the education and well-being of foster youth not only helps them achieve their full potential but also benefits society as a whole by breaking the cycle of poverty and dependence.</div>
+        <div class="card" id="card24" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">By implementing effective support programs and creating a nurturing educational environment, we can help foster youth overcome these obstacles and succeed academically and personally.</div>
+        <div class="card" id="card25" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">By understanding these obstacles and working towards comprehensive solutions, we can help foster youth realize their dreams and potential.</div>
+        <div class="card" id="card26" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Thank you for taking the time to engage with this critical issue and for your commitment to making a difference. <span style="color: rgb(4, 162, 4);">Together, we can turn that 4% into 100%!</span></div>
+
+    </div>
+
+</body>
+
+</html>
