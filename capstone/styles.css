@@ -6,6 +6,7 @@ body {
     max-width: 1200px;
     margin: auto;
     background-color: #27262C;
+    overflow-x: hidden;
 }
 
 header {
@@ -186,4 +187,23 @@ header {
     cursor: pointer;
     font-size: 36px;
     color: rgb(221, 58, 58);
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF8427;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #FF6500;
 }

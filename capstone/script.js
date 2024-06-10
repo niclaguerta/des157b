@@ -15,7 +15,7 @@
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
-                originalCharactersData = data.slice(); // Make a copy of the original data
+                originalCharactersData = data.slice();
                 data.forEach(character => {
                     const characterDiv = document.createElement('div');
                     characterDiv.classList.add('character');
@@ -29,7 +29,6 @@
                     characters.push(characterDiv);
                 });
 
-                // Add click event to characters
                 document.querySelectorAll('.character').forEach(character => {
                     character.addEventListener('click', function () {
                         const id = this.dataset.id;
@@ -42,12 +41,10 @@
                     });
                 });
 
-                // Close popup
                 document.querySelector('.popup .close').addEventListener('click', function () {
                     document.getElementById('popup').classList.add('hidden');
                 });
 
-                // Close popup on scroll to top
                 window.addEventListener('scroll', function () {
                     if (window.scrollY === 0) {
                         document.getElementById('popup').classList.add('hidden');
@@ -105,7 +102,6 @@
                         characters.push(characterDiv);
                     });
 
-                    // Re-attach click event to characters
                     document.querySelectorAll('.character').forEach(character => {
                         character.addEventListener('click', function () {
                             const id = this.dataset.id;
@@ -118,7 +114,6 @@
                         });
                     });
 
-                    // Animate characters walking in from left and right
                     characters.forEach((character, index) => {
                         character.style.display = 'block';
                         character.style.opacity = '1';
@@ -127,7 +122,6 @@
                         character.firstChild.classList.remove('face-down');
                         character.firstChild.classList.add(direction === 'left' ? 'face-right' : 'face-left');
                     });
-                    
 
                     setTimeout(() => {
                         characters.forEach(character => {
@@ -135,7 +129,7 @@
                             character.firstChild.classList.remove('face-left', 'face-right');
                             character.firstChild.classList.add('face-down');
                         });
-                    }, 5000); // Duration should match the animation time
+                    }, 5000);
                 }
 
                 window.addEventListener('scroll', function () {
@@ -155,6 +149,19 @@
                     } else {
                         hiddenFlags.card26 = false;
                     }
+
+                    // Show or hide the scroll-to-top button
+                    const scrollToTopButton = document.getElementById('scrollToTopButton');
+                    if (window.scrollY > 100) {
+                        scrollToTopButton.style.display = 'block';
+                    } else {
+                        scrollToTopButton.style.display = 'none';
+                    }
+                });
+
+                // Scroll to top button functionality
+                document.getElementById('scrollToTopButton').addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             });
     });
