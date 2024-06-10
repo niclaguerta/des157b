@@ -1,211 +1,135 @@
 <!doctype html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Version 1</title>
+	<meta charset="UTF-8">
+	<title>Usability Results</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
 
-    <!-- Normalize CSS for browser compatibility -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
     <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            max-width: 1200px;
-            margin: auto;
-            background-color: #27262C;
-        }
+	background-image: url(images/background.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	padding-top: 671px;
+    background-size: contain;
+    padding-top: 41.9%;
+}
 
-        header {
-            color: #fff;
-            text-align: center;
-            font-family: "Jersey 25", sans-serif;
-            font-size: 3em;
-            padding-top: 250px;
-            padding-bottom: 300px;
-        }
+section {
+	background: #fff;
+	padding: 30px;
+}
 
-        #userinstruction {
-            font-size: 0.7em;
-        }
+article {
+	margin: auto;
+	width: 75%;
+	font-family: Arial;
+	font-size: 24px;
+	color: #000;
+	line-height: 1.5em;
+	background-color: #fff;
+	
+	/* Needed to position the header
+	relative to this parent element */
+	position: relative;
+}
 
-        :root {
-            --pixel-size: 4;
-        }
+header {
+	/* Changes the postioning of this element */
+	position: absolute;
+	
+	/* Moves the element up on top of the image */
+	top: -300px;
+	left: 0;
+	
+	/* Need to set the width, otherwise the element
+	shrink wraps around the content */
+	width: 100%;
+	
+	/* Needed to include the padding as part of
+	the width of the element */
+	box-sizing: border-box;
+}
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(20, calc(28px * var(--pixel-size)));
-            grid-gap: 5px;
-            row-gap: 10px;
-            margin: auto;
-            padding-top: 100px;
-            padding-bottom: 100px;
-            justify-content: center;
-            position: sticky;
-            top: 60px;
-        }
+header h1, header h2 {
+	color: #000;
+	margin: 0;
+	padding: 0;
+	font-family: "Anton", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+	  
 
-        .character {
-            position: relative;
-            width: calc(28px * var(--pixel-size));
-            height: calc(28px * var(--pixel-size));
-            overflow: hidden;   
-        }
 
-        .characterart {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: calc(112px * var(--pixel-size));
-            height: calc(112px * var(--pixel-size));
-            animation: moveSpritesheet 1s steps(4) infinite;
-        }
+header h1 {
+    text-align: left;
+	margin: 1em 0;
+}
 
-        .pixelart {
-            image-rendering: pixelated;
-        }
+header h2 {
+	text-align: left;
+	margin: 1em 0;
+}
 
-        .face-down {
-            top: calc(0px * var(--pixel-size));
-        }
+div p {
+	color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
 
-        .face-up {
-            top: calc(-28px * var(--pixel-size));
-        }
+.content {
+	margin: auto;
+}
 
-        .face-right {
-            top: calc(-56px * var(--pixel-size));
-        }
-
-        .face-left {
-            top: calc(-84px * var(--pixel-size));
-        }
-
-        @keyframes moveSpritesheet {
-            from {
-                transform: translate3d(0px, 0, 0);
-            }
-            to {
-                transform: translate3d(-100%, 0, 0);
-            }
-        }
-
-        .card {
-            background-color: black;
-            color: #fff;
-            width: 75%;
-            font-size: 1.5em;
-            line-height: 1.5em;
-            margin: auto auto 600px auto;
-            padding: 30px 30px 30px 40px;
-            border: 10px ridge #FF8427;
-        }
-
-        .card:last-child {
-            margin-bottom: 50px; /* No bottom margin for the last card */
-        }
+footer {
+	background: rgb(255,115,176);
+	background: radial-gradient(circle, rgba(255,115,176,1) 0%, rgba(255,180,136,1) 50%, rgba(100,171,255,1) 100%);
+	padding: 20px 0;
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	color:#000;
+}
     </style>
 </head>
 
 <body>
+	
+	<section>
+		
+		<article>
+		
+		<header>
+			<h1>Capstone Research</h1>
+			<h2>Usability Results</h2>
+		</header>
+			
+	    <div class="content">
 
-    <header>
-        <h1>we are the 4%</h1>
-        <p>by nicole laguerta</p>
-        <p id="userinstruction">(scroll to continue)</p>
-    </header>
-    
-    <div class="grid-container" id="characterGrid"></div>
+            <img src="images/screenshot.png" alt="screenshot" width="800">
 
-    <div class="cards">
-        <div class="card" id="card1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">In California, 93% of foster youth aspire to attend college, yet only 4% graduate with a bachelor's degree compared to 50% of their non-foster peers. Those from foster care who do attend college face numerous challenges, including financial constraints, lack of family support, academic underpreparedness, mental health struggles, and the absence of emotional support from caring adults.</div>
-        <div class="card" id="card2" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-        <div class="card" id="card3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-        <div class="card" id="card4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-        <div class="card" id="card5" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-        <div class="card" id="card6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-    </div>
+			<h3>Not Enough Interaction</h3>
+			<p>The website appears intuitive and straightforward, but it might be overly simplistic. Currently, users can only scroll, and the sprites, while visually appealing, do not offer much interaction. Users want a way to interact with the sprites beyond just looking at them.</p>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
-    <script>
+			<h3>Paragraph Size</h3>
+			<p>The paragraphs and text might be too lengthy, causing users to skim through them. To improve readability, shorten the content and break it into smaller chunks. Additionally, increasing the line height can make the text easier to read.</p>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init();
-
-            new TypeIt("h1", {
-                speed: 100,
-                loop: false,
-            }).go();
-
-            const container = document.getElementById('characterGrid');
-            let characters = [];
-            for (let i = 0; i < 100; i++) {
-                const characterDiv = document.createElement('div');
-                characterDiv.classList.add('character');
-                const img = document.createElement('img');
-                img.src = 'images/sprite.png'; // Make sure this path is correct
-                img.alt = 'character';
-                img.classList.add('characterart', 'face-down'); // Start with face-down as default
-                characterDiv.appendChild(img);
-                container.appendChild(characterDiv);
-                characters.push(characterDiv);
-            }
-
-            let card3 = document.getElementById('card3');
-            let card5 = document.getElementById('card5');
-            let hiddenCard3 = false;
-            let hiddenCard5 = false;
-
-            function handleCharacterVisibility(card, hiddenFlag, setFlag) {
-                let cardPos = card.getBoundingClientRect().top + window.scrollY;
-                
-                if (window.scrollY + window.innerHeight > cardPos) {
-                    if (!hiddenFlag) {
-                        setFlag(true);
-                        // Select and hide 20% of the characters
-                        for (let i = 0; i < Math.floor(characters.length * 0.2); i++) {
-                            let index = Math.floor(Math.random() * characters.length);
-                            let character = characters[index];
-                            character.style.transition = 'opacity 2s ease-out';
-                            character.style.opacity = '0';
-                            setTimeout(() => {
-                                character.style.display = 'none';
-                            }, 2000); // Ensure it disappears after fade out
-                        }
-                    }
-                } else {
-                    if (hiddenFlag) {
-                        setFlag(false);
-                        // Show all characters
-                        characters.forEach(char => {
-                            char.style.display = 'block';
-                            char.style.transition = 'opacity 2s ease-in';
-                            char.style.opacity = '1';
-                        });
-                    }
-                }
-            }
-
-            window.addEventListener('scroll', function() {
-                handleCharacterVisibility(card3, hiddenCard3, val => hiddenCard3 = val);
-                handleCharacterVisibility(card5, hiddenCard5, val => hiddenCard5 = val);
-            });
-        });
-
-    </script>
+            <h3>Improvements to Make</h3>
+			<p>A user suggested humanizing the sprites by providing information about them. When clicked, users can learn more about the sprites, creating a connection and making the sprites more impactful. I plan to implement this in my project to enhance user engagement. Additionally, I will adjust the text by breaking it into smaller chunks, ensuring the popup content from clicking on the sprites is more visible and effective.</p>
+			
+		</div>
+		
+		</article>
+		
+	</section>
+	
+	<footer>
+		<p>By Nicole Laguerta :) </p>
+	</footer>
+	
 </body>
-
 </html>
