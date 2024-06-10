@@ -10,6 +10,7 @@
         const container = document.getElementById('characterGrid');
         let characters = [];
         let originalCharactersData = [];
+        let lastScrollTop = 0; // Track the last scroll position
 
         // Fetch JSON data
         fetch('data.json')
@@ -114,25 +115,17 @@
                         });
                     });
 
-                    characters.forEach((character, index) => {
-                        character.style.display = 'block';
-                        character.style.opacity = '1';
-                        let direction = Math.random() > 0.5 ? 'left' : 'right';
-                        character.classList.add(`walk-${direction}-in`);
-                        character.firstChild.classList.remove('face-down');
-                        character.firstChild.classList.add(direction === 'left' ? 'face-right' : 'face-left');
-                    });
-
+                    // Fade in characters
                     setTimeout(() => {
-                        characters.forEach(character => {
-                            character.classList.remove('walk-left-in', 'walk-right-in');
-                            character.firstChild.classList.remove('face-left', 'face-right');
-                            character.firstChild.classList.add('face-down');
+                        document.querySelectorAll('.character').forEach(character => {
+                            character.classList.add('show');
                         });
-                    }, 5000);
+                    }, 100);
                 }
 
                 window.addEventListener('scroll', function () {
+                    let st = window.pageYOffset || document.documentElement.scrollTop;
+
                     handleCharacterVisibility('card7', 0.15);
                     handleCharacterVisibility('card12', 0.15);
                     handleCharacterVisibility('card15', 0.15);
@@ -157,6 +150,15 @@
                     } else {
                         scrollToTopButton.style.display = 'none';
                     }
+
+                    // Detect scrolling up
+                    if (st < lastScrollTop && st < 100) {
+                        restoreAllCharacters();
+                        Object.keys(hiddenFlags).forEach(key => {
+                            hiddenFlags[key] = false;
+                        });
+                    }
+                    lastScrollTop = st <= 0 ? 0 : st;
                 });
 
                 // Scroll to top button functionality
